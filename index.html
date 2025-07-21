@@ -15,7 +15,7 @@
     <!-- Application Structure Plan: The SPA is designed with a narrative flow. It starts with a strong hero section to introduce Nicolai. This is followed by an an interactive timeline for exploring his career journey, allowing users to see both the big picture and detailed role descriptions. A dedicated skills section uses a radar chart for a quick, visually engaging assessment of his core competencies. A "Personal Profile" section has been added to highlight his unique approach and motivations. Finally, a "Project Highlights" section acts as a portfolio, using cards to present key achievements in a digestible format. This structure was chosen to guide the user from a high-level summary to detailed evidence of his capabilities, making it more engaging than a linear CV. -->
     <!-- Visualization & Content Choices: 
         - Timeline (HTML/CSS/JS): Goal is to show career progression. An interactive vertical timeline is better than a list for showing the flow and duration of roles. Users can click to expand details, keeping the initial view clean.
-        - Skills Radar Chart (Chart.js): Goal is to provide a quick, holistic view of core competencies. A radar chart is effective for comparing multiple skills against each other and is more visually interesting than a simple list.
+        - Skills Radar Chart (Chart.js): Goal is to provide a quick, visually engaging assessment of his core competencies. A radar chart is effective for comparing multiple skills against each other and is more visually interesting than a simple list.
         - Project Cards (HTML/CSS/JS): Goal is to showcase specific, impactful achievements. A card-based layout allows for organizing diverse project information (problem, action, result) into scannable, visually appealing blocks. Each card now includes a small, thematic placeholder icon.
         - Text Blocks (HTML/JS): Goal is to provide context. Text is used for summaries and detailed descriptions, revealed on interaction to avoid overwhelming the user.
         - Personal Profile (HTML/CSS/JS): Goal is to convey Nicolai's unique approach and motivations. Presented as a concise text block for direct communication, now with a thematic image.
@@ -105,7 +105,6 @@
 
         <!-- Summary Section -->
         <section id="summary" class="mb-16 text-center">
-            <!-- Removed: <img src="https://placehold.co/800x300/263238/00bfa5?text=Strategic+Vision" alt="Strategic Vision" class="w-full rounded-2xl shadow-lg mb-8 mx-auto max-w-4xl object-cover h-48 md:h-64"> -->
             <h1 class="text-4xl md:text-5xl font-bold text-[#eceff1] mb-4">Senior Business Consultant</h1> <!-- Very light grey -->
             <p class="text-lg md:text-xl text-[#b0bec5] max-w-3xl mx-auto"> <!-- Light Grey Blue -->
                 Expert in Innovation Reporting, Stakeholder Engagement, and Data-Driven Decision Making. Driving strategic growth and operational excellence with a passion for optimizing complex processes and leveraging digital transformation.
@@ -165,10 +164,7 @@
 
         <!-- Education Section -->
         <section id="education" class="bg-[#263238] p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-8"> <!-- Dark Blue Grey background, increased rounded-2xl and shadow-lg -->
-            <div class="md:w-1/3 flex-shrink-0">
-                <img src="https://placehold.co/300x200/263238/00bfa5?text=Academic+Excellence" alt="Academic Excellence" class="w-full h-auto rounded-2xl shadow-md object-cover">
-            </div>
-            <div class="md:w-2/3">
+            <div class="md:w-full"> <!-- Changed from md:w-2/3 to md:w-full -->
                 <h2 class="text-3xl font-bold text-center md:text-left mb-8 text-[#eceff1]">Education & Certifications</h2> <!-- Very light grey -->
                 <div id="education-list" class="space-y-4 max-w-2xl mx-auto">
                     <!-- Education items will be dynamically populated here -->
@@ -241,37 +237,37 @@
                    {
                     title: "Innovation KPI Framework",
                     company: "Grundfos",
-                    icon: "📈", // Unicode icon
+                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
                     description: "Led the development and implementation of eight core innovation KPIs to standardize performance reporting, providing leadership with clear, actionable insights."
                 },
                 {
                     title: "Production Optimization: Digital Simulation Lead", 
                     company: "Velux",
-                    icon: "⚙️", // Unicode icon
+                    imageUrl: "uploaded:Velux.png-d0e40186-2c74-4f3e-9aff-f1393b98fa2a", // Velux logo
                     description: "Led the development of a digital simulation to evaluate a client's production flow, presenting a pilot case for building and supporting their digital production model as an external partner." 
                 },
                 {
                     title: "CE Marking Documentation",
                     company: "Stiesdal HydroGen A/S",
-                    icon: "📄", // Unicode icon
+                    imageUrl: "uploaded:Stiesdal Hydrogen.PNG-e232d36f-1807-43fe-8cb2-5ea036998985", // Stiesdal logo
                     description: "Managed a consultancy team to ensure the timely and comprehensive delivery of critical documentation required for CE marking."
                 },
                    {
                     title: "BI Dashboard Development",
                     company: "Grundfos (External)",
-                    icon: "📊", // Unicode icon
+                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
                     description: "Created interactive dashboards for capability and portfolio management, which revolutionized project oversight and facilitated data-driven leadership discussions."
                 },
                    {
                     title: "Radical Product Development Project Management",
                     company: "Grundfos (External)",
-                    icon: "🚀", // Unicode icon
+                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
                     description: "Managed a radical product development project for an innovative pump design, overseeing its progression and presenting key analyses to the project board, even amidst an organizational transition to agile methodologies."
                 },
                 {
                     title: "Warehouse Efficiency Analysis",
                     company: "JENSEN-GROUP",
-                    icon: "📦", // Unicode icon
+                    imageUrl: "uploaded:Jensen.png-f9ec44c7-cc41-41de-ab09-8fa3e8dd6805", // JENSEN-GROUP logo
                     description: "Developed a dynamic Power BI heatmap to visualize and analyze warehouse flow, revealing key areas for optimization and inventory management improvement."
                 }
             ];
@@ -326,11 +322,11 @@
             const projectCardsContainer = document.getElementById('project-cards');
             projectData.forEach(project => {
                 const card = `
-                    <div class="bg-[#263238] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"> <!-- Dark Blue Grey background, increased rounded-xl and shadow-lg -->
-                        <div class="text-4xl mb-4">${project.icon}</div>
-                        <h3 class="font-bold text-xl mb-2 text-[#eceff1]">${project.title}</h3> <!-- Very light grey -->
-                        <p class="text-[#b0bec5] mb-2 text-sm font-semibold">${project.company}</p> <!-- Light Grey Blue -->
-                        <p class="text-[#b0bec5]">${project.description}</p> <!-- Light Grey Blue -->
+                    <div class="bg-[#373839] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                        <img src="images/MOMO_1706251565963.png" class="w-16 h-16 mb-4 rounded-full object-contain">
+                        <h3 class="font-bold text-xl mb-2 text-[#eceff1]">${project.title}</h3>
+                        <p class="text-[#eceff1] mb-2 text-sm font-semibold">${project.company}</p> <!-- Changed company text to accent color -->
+                        <p class="text-[#eceff1]">${project.description}</p> <!-- Changed description text to accent color -->
                     </div>
                 `;
                 projectCardsContainer.innerHTML += card;
