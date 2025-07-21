@@ -72,9 +72,12 @@
     <!-- Header & Navigation -->
     <header class="bg-[#263238]/80 backdrop-blur-md sticky top-0 z-50 shadow-lg rounded-b-xl"> <!-- Dark Blue Grey for header, added rounded-b-xl and shadow-lg -->
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-lg font-bold text-[#eceff1]">Nicolai Arnfred Nielsen</div> <!-- Very light grey -->
+            <div class="flex items-center"> <!-- Container for profile picture and name -->
+                <img src="uploaded:MOMO_1706251565963.jpg-3f6a1ea0-dcb7-499e-a582-ac682093409a" alt="Nicolai Arnfred Nielsen Portrait" class="w-8 h-8 rounded-full mr-2 object-cover"> <!-- Small circular portrait -->
+                <div class="text-lg font-bold text-[#eceff1]">Nicolai Arnfred Nielsen</div> <!-- Very light grey -->
+            </div>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#summary" class="nav-link text-[#b0bec5]">Summary</a> <!-- Light Grey Blue -->
+                <a href="#summary" class="nav-link text-[#b0bec5]">Summary</a>
                 <a href="#personal-profile" class="nav-link text-[#b0bec5]">Profile</a>
                 <a href="#experience" class="nav-link text-[#b0bec5]">Experience</a>
                 <a href="#skills" class="nav-link text-[#b0bec5]">Skills</a>
@@ -88,7 +91,7 @@
             </div>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-[#263238] rounded-b-xl"> <!-- Dark Blue Grey for mobile menu, added rounded-b-xl -->
-             <a href="#summary" class="block py-2 px-4 text-sm text-[#b0bec5] hover:bg-[#37474f]">Summary</a> <!-- Light Grey Blue, darker hover -->
+             <a href="#summary" class="block py-2 px-4 text-sm text-[#b0bec5] hover:bg-[#37474f]">Summary</a>
              <a href="#personal-profile" class="block py-2 px-4 text-sm text-[#b0bec5] hover:bg-[#37474f]">Profile</a>
              <a href="#experience" class="block py-2 px-4 text-sm text-[#b0bec5] hover:bg-[#37474f]">Experience</a>
              <a href="#skills" class="block py-2 px-4 text-sm text-[#b0bec5] hover:bg-[#37474f]">Skills</a>
@@ -112,7 +115,7 @@
         <!-- Personal Profile Section -->
         <section id="personal-profile" class="mb-16 bg-[#263238] p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-8"> <!-- Dark Blue Grey background, increased rounded-2xl and shadow-lg -->
             <div class="md:w-1/3 flex-shrink-0">
-                <img src="uploaded:image_4cb751.jpg-6a3b9838-7f4c-42e9-a83b-2dd1336ed81a" alt="Nicolai Arnfred Nielsen Profile Picture" class="w-full h-auto rounded-2xl shadow-md object-cover"> <!-- Increased rounded-2xl -->
+                <img src="uploaded:MOMO_1706251565963.jpg-3f6a1ea0-dcb7-499e-a582-ac682093409a" alt="Nicolai Arnfred Nielsen Profile Picture" class="w-full h-auto rounded-2xl shadow-md object-cover"> <!-- Increased rounded-2xl -->
             </div>
             <div class="md:w-2/3">
                 <h2 class="text-3xl font-bold text-center md:text-left mb-8 text-[#eceff1]">Personal Profile & Approach</h2> <!-- Very light grey -->
@@ -405,10 +408,10 @@
                                     return context.dataset.label + ': ' + context.raw + '/5'; // Show /5 for clarity
                                 }
                             }
+                            }
                         }
                     }
-                }
-            });
+                });
 
             // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
