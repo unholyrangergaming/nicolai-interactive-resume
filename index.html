@@ -248,7 +248,7 @@
                 },
                 {
                     title: "CE Marking Documentation",
-                    
+                    company: "Stiesdal HydroGen A/S",
                     imageUrl: "Images/Stiesdal", // Stiesdal logo
                     description: "Managed a consultancy team to ensure the timely and comprehensive delivery of critical documentation required for CE marking."
                 },
@@ -323,7 +323,7 @@
             projectData.forEach(project => {
                 const card = `
                     <div class="bg-[#373839] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                        <img src="${project.imageUrl}" alt="${project.company} logo" class="w-16 h-16 mb-4 rounded-full object-contain">
+                        <img src="${project.imageUrl}" alt="${project.company} logo" class="w-full h-auto rounded-2xl shadow-md object-cover"
                         <h3 class="font-bold text-xl mb-2 text-[#eceff1]">${project.title}</h3>
                         <p class="text-[#eceff1] mb-2 text-sm font-semibold">${project.company}</p> <!-- Changed company text to accent color -->
                         <p class="text-[#eceff1]">${project.description}</p> <!-- Changed description text to accent color -->
