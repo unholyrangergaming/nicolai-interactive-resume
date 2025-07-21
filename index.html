@@ -237,37 +237,37 @@
                    {
                     title: "Innovation KPI Framework",
                     company: "Grundfos",
-                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
+                    imageUrl: "Images/Grundfos", // Grundfos logo
                     description: "Led the development and implementation of eight core innovation KPIs to standardize performance reporting, providing leadership with clear, actionable insights."
                 },
                 {
                     title: "Production Optimization: Digital Simulation Lead", 
                     company: "Velux",
-                    imageUrl: "uploaded:Velux.png-d0e40186-2c74-4f3e-9aff-f1393b98fa2a", // Velux logo
+                    imageUrl: "Images/Velux", // Velux logo
                     description: "Led the development of a digital simulation to evaluate a client's production flow, presenting a pilot case for building and supporting their digital production model as an external partner." 
                 },
                 {
                     title: "CE Marking Documentation",
                     company: "Stiesdal HydroGen A/S",
-                    imageUrl: "uploaded:Stiesdal Hydrogen.PNG-e232d36f-1807-43fe-8cb2-5ea036998985", // Stiesdal logo
+                    imageUrl: "Images/Stiesdal", // Stiesdal logo
                     description: "Managed a consultancy team to ensure the timely and comprehensive delivery of critical documentation required for CE marking."
                 },
                    {
                     title: "BI Dashboard Development",
                     company: "Grundfos (External)",
-                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
+                    imageUrl: "Images/Grundfos", // Grundfos logo
                     description: "Created interactive dashboards for capability and portfolio management, which revolutionized project oversight and facilitated data-driven leadership discussions."
                 },
                    {
                     title: "Radical Product Development Project Management",
                     company: "Grundfos (External)",
-                    imageUrl: "uploaded:Grundfos.PNG-57c8b0c0-5576-4a86-988e-becafdb526e9", // Grundfos logo
+                    imageUrl: "Images/Grundfos", // Grundfos logo
                     description: "Managed a radical product development project for an innovative pump design, overseeing its progression and presenting key analyses to the project board, even amidst an organizational transition to agile methodologies."
                 },
                 {
                     title: "Warehouse Efficiency Analysis",
                     company: "JENSEN-GROUP",
-                    imageUrl: "uploaded:Jensen.png-f9ec44c7-cc41-41de-ab09-8fa3e8dd6805", // JENSEN-GROUP logo
+                    imageUrl: "Images/Jensen", // JENSEN-GROUP logo
                     description: "Developed a dynamic Power BI heatmap to visualize and analyze warehouse flow, revealing key areas for optimization and inventory management improvement."
                 }
             ];
@@ -323,7 +323,7 @@
             projectData.forEach(project => {
                 const card = `
                     <div class="bg-[#373839] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                        <img src="images/MOMO_1706251565963.png" class="w-16 h-16 mb-4 rounded-full object-contain">
+                        <img src="${project.imageUrl}" alt="${project.company} logo" class="w-16 h-16 mb-4 rounded-full object-contain">
                         <h3 class="font-bold text-xl mb-2 text-[#eceff1]">${project.title}</h3>
                         <p class="text-[#eceff1] mb-2 text-sm font-semibold">${project.company}</p> <!-- Changed company text to accent color -->
                         <p class="text-[#eceff1]">${project.description}</p> <!-- Changed description text to accent color -->
